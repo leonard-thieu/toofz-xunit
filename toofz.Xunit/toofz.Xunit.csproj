@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DisplayFactAttribute.cs" />
+    <Compile Include="DisplayTheoryAttribute.cs" />
     <Compile Include="DisplayFactDiscoverer.cs" />
     <Compile Include="DisplayFactTestCase.cs" />
   </ItemGroup>
