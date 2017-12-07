@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <RootNamespace>Xunit</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Leonard Thieu</Authors>
+    <Title>toofz xUnit</Title>
+    <Description>Contains extensions for xUnit.net.</Description>
+    <Copyright>Copyright © Leonard Thieu 2017</Copyright>
+    <PackageLicenseUrl>https://github.com/leonard-thieu/toofz-xunit/blob/4a5f5504d9359d4e2f04b459b2624d2b75c4d5e4/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/leonard-thieu/toofz-xunit</PackageProjectUrl>
+    <PackageIconUrl>https://user-images.githubusercontent.com/5265970/29717713-27e1a95c-897e-11e7-9d28-dae64be705b5.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/leonard-thieu/toofz-xunit.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.1\toofz.Xunit.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer.Core" Version="2.2.0" />
+    <PackageReference Include="xunit.core" Version="2.3.1" />
+  </ItemGroup>
+
+</Project>
