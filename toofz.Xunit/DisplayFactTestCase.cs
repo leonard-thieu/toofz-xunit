@@ -8,6 +8,7 @@ using Xunit.Sdk;
 
 namespace Xunit
 {
+    [Serializable]
     public sealed class DisplayFactTestCase : XunitTestCase
     {
         [EditorBrowsable(EditorBrowsableState.Never)]
