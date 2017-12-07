@@ -16,7 +16,7 @@
     <IsPackable>true</IsPackable>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <PackageId>toofz.Xunit</PackageId>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.4</PackageVersion>
     <Authors>Leonard Thieu</Authors>
     <Title>toofz xUnit</Title>
     <Description>Contains extensions for xUnit.net.</Description>
