@@ -8,6 +8,7 @@
 
   <PropertyGroup>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <PackageId>toofz.Xunit</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
     <Authors>Leonard Thieu</Authors>
     <Title>toofz xUnit</Title>
