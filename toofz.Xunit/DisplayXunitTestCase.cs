@@ -27,11 +27,27 @@ namespace Xunit
             var ignoredWords = factAttribute.GetConstructorArguments().OfType<string[]>().Single();
             var methodName = displayName.Split('.').Last();
 
-            return string.Join(
+            var formattedDisplayName = string.Join(
                 ", ",
                 methodName
                     .Split('_')
                     .Select(n => string.Join(" ", Humanize(n, ignoredWords))));
+
+            if (TestMethodArguments.Any())
+            {
+                var args = Method.GetParameters().Zip(TestMethodArguments, (p, a) =>
+                {
+                    if (a.GetType() == typeof(string))
+                    {
+                        return $"{p.Name}: \"{a}\"";
+                    }
+                    return $"{p.Name}: {a}";
+                });
+
+                formattedDisplayName += $"({string.Join(", ", args)})";
+            }
+
+            return formattedDisplayName;
         }
 
         private IEnumerable<string> Humanize(string segment, string[] ignoredWords)
