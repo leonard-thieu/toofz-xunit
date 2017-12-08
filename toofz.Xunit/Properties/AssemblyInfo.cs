@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyVersion("1.0.5.0")]
+[assembly: AssemblyVersion("1.0.6.0")]
 
 [assembly: AssemblyCopyright("Copyright © Leonard Thieu 2017")]
 [assembly: AssemblyProduct("toofz")]
