@@ -1,21 +1,15 @@
-﻿using System.Collections.Generic;
-using Xunit.Abstractions;
+﻿using Xunit.Abstractions;
 using Xunit.Sdk;
 
 namespace Xunit
 {
-    public sealed class DisplayFactDiscoverer : IXunitTestCaseDiscoverer
+    public sealed class DisplayFactDiscoverer : FactDiscoverer
     {
-        public DisplayFactDiscoverer(IMessageSink diagnosticMessageSink)
-        {
-            this.diagnosticMessageSink = diagnosticMessageSink;
-        }
+        public DisplayFactDiscoverer(IMessageSink diagnosticMessageSink) : base(diagnosticMessageSink) { }
 
-        private readonly IMessageSink diagnosticMessageSink;
-
-        public IEnumerable<IXunitTestCase> Discover(ITestFrameworkDiscoveryOptions discoveryOptions, ITestMethod testMethod, IAttributeInfo factAttribute)
+        protected override IXunitTestCase CreateTestCase(ITestFrameworkDiscoveryOptions discoveryOptions, ITestMethod testMethod, IAttributeInfo factAttribute)
         {
-            yield return new DisplayFactTestCase(diagnosticMessageSink, discoveryOptions.MethodDisplayOrDefault(), testMethod);
+            return new DisplayXunitTestCase(DiagnosticMessageSink, discoveryOptions.MethodDisplayOrDefault(), testMethod);
         }
     }
 }

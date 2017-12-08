@@ -2,7 +2,7 @@
 
 namespace Xunit
 {
-    [XunitTestCaseDiscoverer("Xunit.DisplayFactDiscoverer", "toofz.Xunit")]
+    [XunitTestCaseDiscoverer("Xunit.DisplayTheoryDiscoverer", "toofz.Xunit")]
     public sealed class DisplayTheoryAttribute : TheoryAttribute
     {
         public DisplayTheoryAttribute(params string[] ignoredWords) { }

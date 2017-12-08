@@ -65,9 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DisplayFactAttribute.cs" />
-    <Compile Include="DisplayTheoryAttribute.cs" />
     <Compile Include="DisplayFactDiscoverer.cs" />
-    <Compile Include="DisplayFactTestCase.cs" />
+    <Compile Include="DisplayTheoryAttribute.cs" />
+    <Compile Include="DisplayTheoryDiscoverer.cs" />
+    <Compile Include="DisplayXunitTestCase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,17 +9,18 @@ using Xunit.Sdk;
 namespace Xunit
 {
     [Serializable]
-    public sealed class DisplayFactTestCase : XunitTestCase
+    public sealed class DisplayXunitTestCase : XunitTestCase
     {
         [EditorBrowsable(EditorBrowsableState.Never)]
         [Obsolete("Called by the de-serializer", true)]
-        public DisplayFactTestCase() { }
+        public DisplayXunitTestCase() { }
 
-        public DisplayFactTestCase(
+        public DisplayXunitTestCase(
             IMessageSink diagnosticMessageSink,
             TestMethodDisplay defaultMethodDisplay,
-            ITestMethod testMethod)
-            : base(diagnosticMessageSink, defaultMethodDisplay, testMethod, testMethodArguments: null) { }
+            ITestMethod testMethod,
+            object[] testMethodArguments = null)
+            : base(diagnosticMessageSink, defaultMethodDisplay, testMethod, testMethodArguments) { }
 
         protected override string GetDisplayName(IAttributeInfo factAttribute, string displayName)
         {
