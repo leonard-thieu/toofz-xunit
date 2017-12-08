@@ -33,18 +33,20 @@ namespace Xunit
                     .Split('_')
                     .Select(n => string.Join(" ", Humanize(n, ignoredWords))));
 
-            if (TestMethodArguments.Any())
+            if (TestMethodArguments?.Length > 0)
             {
-                var args = Method.GetParameters().Zip(TestMethodArguments, (p, a) =>
+                var parameters = Method.GetParameters();
+
+                var args = parameters.Zip(TestMethodArguments, (p, a) =>
                 {
                     if (a.GetType() == typeof(string))
                     {
                         return $"{p.Name}: \"{a}\"";
                     }
                     return $"{p.Name}: {a}";
-                });
+                }).ToList();
 
-                formattedDisplayName += $"({string.Join(", ", args)})";
+                formattedDisplayName += $" ({string.Join(", ", args)})";
             }
 
             return formattedDisplayName;
