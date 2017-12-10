@@ -24,6 +24,12 @@ namespace Xunit
 
         protected override string GetDisplayName(IAttributeInfo factAttribute, string displayName)
         {
+            var factAttributeDisplayName = factAttribute.GetNamedArgument<string>(nameof(FactAttribute.DisplayName));
+            if (factAttributeDisplayName != null)
+            {
+                return factAttributeDisplayName;
+            }
+
             var ignoredWords = factAttribute.GetConstructorArguments().OfType<string[]>().Single();
             var methodName = displayName.Split('.').Last();
 
