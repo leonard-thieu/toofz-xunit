@@ -9,7 +9,7 @@ using Xunit.Sdk;
 namespace Xunit
 {
     [Serializable]
-    public sealed class DisplayXunitTestCase : XunitTestCase
+    internal sealed class DisplayXunitTestCase : XunitTestCase
     {
         [EditorBrowsable(EditorBrowsableState.Never)]
         [Obsolete("Called by the de-serializer", true)]

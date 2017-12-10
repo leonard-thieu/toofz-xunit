@@ -4,7 +4,7 @@ using Xunit.Sdk;
 
 namespace Xunit
 {
-    public sealed class DisplayTheoryDiscoverer : TheoryDiscoverer
+    internal sealed class DisplayTheoryDiscoverer : TheoryDiscoverer
     {
         public DisplayTheoryDiscoverer(IMessageSink diagnosticMessageSink) : base(diagnosticMessageSink) { }
 

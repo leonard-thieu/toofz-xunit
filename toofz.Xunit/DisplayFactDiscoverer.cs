@@ -3,7 +3,7 @@ using Xunit.Sdk;
 
 namespace Xunit
 {
-    public sealed class DisplayFactDiscoverer : FactDiscoverer
+    internal sealed class DisplayFactDiscoverer : FactDiscoverer
     {
         public DisplayFactDiscoverer(IMessageSink diagnosticMessageSink) : base(diagnosticMessageSink) { }
 
